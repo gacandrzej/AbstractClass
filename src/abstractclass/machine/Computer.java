@@ -8,28 +8,35 @@ public class Computer extends Machine {
 
     @Override
     public Machine create() {
-        return null;
+        return new Computer(this.producer, this.yearOfProduction);
     }
 
     @Override
     public void powerOn() {
-        System.out.println("-----------computer power on --------");
-
+        System.out.println(AnsiColors.RED + "-----------computer power on --------" + AnsiColors.RESET);
     }
 
     @Override
     public void powerOFF() {
-        System.out.println("-----------computer power off --------");
-
+        System.out.println(AnsiColors.RED + "-----------computer power off --------" + AnsiColors.RESET);
     }
 
     @Override
     public void soundsTheMachineMakes() {
-        System.out.println("beep beep ...........");
+        System.out.println(AnsiColors.YELLOW + "beep beep ..........." + AnsiColors.RESET);
     }
 
 
     public void listTheManufacturer() {
         System.out.println("producer = " + producer + " yearOfProduction:" + yearOfProduction);
     }
+
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "producer='" + producer + '\'' +
+                ", yearOfProduction=" + yearOfProduction +
+                '}';
+    }
+
 }

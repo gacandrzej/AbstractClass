@@ -11,23 +11,22 @@ public class CoffeeMaker extends Machine {
 
     @Override
     public Machine create() {
-        return null;
+        return new CoffeeMaker(this.producer, this.yearOfProduction, this.color);
     }
 
     @Override
     public void powerOn() {
-        System.out.println("-----------coffemaker power on --------");
+        System.out.println(AnsiColors.BLUE + "-----------coffemaker power on --------" + AnsiColors.RESET);
     }
 
     @Override
     public void powerOFF() {
-        System.out.println("-----------coffeemaker power off --------");
-
+        System.out.println(AnsiColors.BLUE + "-----------coffeemaker power off --------" + AnsiColors.RESET);
     }
 
     @Override
     public void soundsTheMachineMakes() {
-        System.out.println("brbrbrbrbrr..........");
+        System.out.println(AnsiColors.GREEN + "brbrbrbrbrr.........." + AnsiColors.RESET);
     }
 
 
